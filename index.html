@@ -6,80 +6,113 @@
     // ==============================
     document.addEventListener("keydown", function (e) {
 
+        const key = e.key.toLowerCase();
+
         // F12
         if (e.key === "F12") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + U
-        if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        if (e.ctrlKey && key === "u") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + Shift + I
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+        if (e.ctrlKey && e.shiftKey && key === "i") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + Shift + J
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+        if (e.ctrlKey && e.shiftKey && key === "j") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + Shift + C
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") {
+        if (e.ctrlKey && e.shiftKey && key === "c") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + I
-        if (e.ctrlKey && e.key.toLowerCase() === "i") {
+        if (e.ctrlKey && key === "i") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
             return false;
         }
 
         // Ctrl + S
-        if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        if (e.ctrlKey && key === "s") {
             e.preventDefault();
-            e.stopPropagation();
+            e.stopImmediatePropagation();
+            return false;
+        }
+
+        // Ctrl + Shift + K
+        if (e.ctrlKey && e.shiftKey && key === "k") {
+            e.preventDefault();
+            e.stopImmediatePropagation();
             return false;
         }
 
     }, true);
-/* =========================
-   SEMBUNYIKAN DI MOBILE
-   ========================= */
-@media screen and (max-width: 768px) {
-    .container-footer-bawah {
-        display: none !important;
-    }
-}
+
 
     // ==============================
     // BLOK KLIK KANAN
     // ==============================
     document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
-        e.stopPropagation();
+        e.stopImmediatePropagation();
         return false;
     }, true);
 
 
     // ==============================
-    // BLOK DRAG / COPY OPTIONAL
+    // BLOK DRAG
     // ==============================
     document.addEventListener("dragstart", function (e) {
         e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    }, true);
+
+
+    // ==============================
+    // BLOK COPY
+    // ==============================
+    document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    }, true);
+
+
+    // ==============================
+    // BLOK CUT
+    // ==============================
+    document.addEventListener("cut", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    }, true);
+
+
+    // ==============================
+    // BLOK PASTE
+    // ==============================
+    document.addEventListener("paste", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
         return false;
     }, true);
 
