@@ -1,85 +1,3 @@
-<style>
-.container-footer-bawah {
-    max-width: 9000px;
-    margin: 25px auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    z-index: 99999;
-}
-
-/* Marquee berada PALING BELAKANG */
-.marquee-track {
-    position: absolute;
-    top: 53%;
-    left: 0%;
-    transform: translateY(-55%,-50%);
-    height: 100%;
-    display: flex;
-    width: max-content;
-    z-index: 0;
-
-    animation: marqueeAnimation 8s linear infinite;
-}
-
-/* Gambar yang berjalan */
-.top-image {
-    height: 95%;
-    width: auto;
-    max-width: none;
-    flex-shrink: 0;
-    display: block;
-}
-
-/* Background/frame berada DI ATAS marquee */
-.background-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    z-index: 2;
-    pointer-events: none;
-}
-
-/* Animasi */
-@keyframes marqueeAnimation {
-    from {
-        transform: translate(0, -50%);
-    }
-
-    to {
-        transform: translate(-50%, -50%);
-    }
-}
-</style>
-
-<div class="container-footer-bawah">
-
-    <!-- MARQUEE DI BELAKANG -->
-    <div class="marquee-track">
-
-        <img
-            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/e21319e1791f24e85d09c2e6570e23b9/jenistest1.png"
-            class="top-image"
-            alt="Gambar Atas"
-        >
-
-        <img
-            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/e21319e1791f24e85d09c2e6570e23b9/jenistest1.png"
-            class="top-image"
-            alt="Gambar Atas"
-        >
-
-    </div>
-
-    <!-- FRAME DI DEPAN -->
-    <img
-        src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/21772570eabf419e59f652f67cccf8d7/banktest.png"
-        class="background-image"
-        alt="Daftar Bank"
-    >
-
-</div>
 <script>
 (function () {
 
@@ -167,3 +85,86 @@
 
 })();
 </script>
+
+<style>
+.container-footer-bawah {
+    max-width: 9000px;
+    margin: 25px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 99999;
+}
+
+/* Marquee berada PALING BELAKANG */
+.marquee-track {
+    position: absolute;
+    top: 53%;
+    left: 0%;
+    transform: translateY(-55%,-50%);
+    height: 100%;
+    display: flex;
+    width: max-content;
+    z-index: 0;
+
+    animation: marqueeAnimation 8s linear infinite;
+}
+
+/* Gambar yang berjalan */
+.top-image {
+    height: 95%;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Background/frame berada DI ATAS marquee */
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Animasi */
+@keyframes marqueeAnimation {
+    from {
+        transform: translate(0, -50%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+</style>
+
+<div class="container-footer-bawah">
+
+    <!-- MARQUEE DI BELAKANG -->
+    <div class="marquee-track">
+
+        <img
+            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/e21319e1791f24e85d09c2e6570e23b9/jenistest1.png"
+            class="top-image"
+            alt="Gambar Atas"
+        >
+
+        <img
+            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/e21319e1791f24e85d09c2e6570e23b9/jenistest1.png"
+            class="top-image"
+            alt="Gambar Atas"
+        >
+
+    </div>
+
+    <!-- FRAME DI DEPAN -->
+    <img
+        src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/21772570eabf419e59f652f67cccf8d7/banktest.png"
+        class="background-image"
+        alt="Daftar Bank"
+    >
+
+</div>
