@@ -1,0 +1,162 @@
+<style>
+.container-footer-bawah {
+    max-width: 600px;
+    margin: 25px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 99999;
+}
+
+/* Marquee berada PALING BELAKANG */
+.marquee-track {
+    position: absolute;
+    top: 53%;
+    left: 0%;
+    transform: translateY(-55%,-50%);
+    height: 100%;
+    display: flex;
+    width: max-content;
+    z-index: 0;
+
+    animation: marqueeAnimation 12s linear infinite;
+}
+
+/* Gambar yang berjalan */
+.top-image {
+    height: 95%;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Background/frame berada DI ATAS marquee */
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Animasi */
+@keyframes marqueeAnimation {
+    from {
+        transform: translate(0, -50%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+</style>
+
+<div class="container-footer-bawah">
+
+    <!-- MARQUEE DI BELAKANG -->
+    <div class="marquee-track">
+
+        <img
+            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/9e6d72588f6f23501c938e9a6802b263/jenistest1.png"
+            class="top-image"
+            alt="Gambar Atas"
+        >
+
+        <img
+            src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/9e6d72588f6f23501c938e9a6802b263/jenistest1.png"
+            class="top-image"
+            alt="Gambar Atas"
+        >
+
+    </div>
+
+    <!-- FRAME DI DEPAN -->
+    <img
+        src="https://cdn.areabermain.club/assets/cdn/az7/2026/08/13/20260813/21772570eabf419e59f652f67cccf8d7/banktest.png"
+        class="background-image"
+        alt="Daftar Bank"
+    >
+
+</div>
+<script>
+(function () {
+
+    // ==============================
+    // BLOK SHORTCUT KEYBOARD
+    // ==============================
+    document.addEventListener("keydown", function (e) {
+
+        // F12
+        if (e.key === "F12") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + U
+        if (e.ctrlKey && e.key.toLowerCase() === "u") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + Shift + I
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + Shift + J
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + Shift + C
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + I
+        if (e.ctrlKey && e.key.toLowerCase() === "i") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+        // Ctrl + S
+        if (e.ctrlKey && e.key.toLowerCase() === "s") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+    }, true);
+
+
+    // ==============================
+    // BLOK KLIK KANAN
+    // ==============================
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }, true);
+
+
+    // ==============================
+    // BLOK DRAG / COPY OPTIONAL
+    // ==============================
+    document.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+        return false;
+    }, true);
+
+})();
+</script>
